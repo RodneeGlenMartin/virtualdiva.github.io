@@ -1,11 +1,33 @@
+html, body {
+    height: 100%;
+    overflow: hidden; /* Hide overflow to prevent unwanted scrollbars */
+}
+
 body {
     background-color: white;
-    overflow: hidden; /* Hide overflow to avoid scrolling */
     text-align: center;
     background-image: none;
     margin: 10px; /* Reduce margin to save space */
     font-size: 1rem; /* Set a moderate font size for body */
     line-height: 1.4; /* Reduce line spacing to fit content better */
+    overflow-y: scroll; /* Allow vertical scrolling if needed */
+}
+
+#mainframe {
+    height: 100%;
+    min-height: 500px;
+    overflow: auto;
+}
+
+.footer {
+    position: relative;
+    z-index: 1;
+    margin-top: 20px;
+}
+
+.container {
+    height: auto;
+    overflow-y: auto;
 }
 
 button {
@@ -24,15 +46,13 @@ button {
 button:hover {
     background-color: #e74492;
     color: white;
-    transition: 0.2s;
     letter-spacing: normal;
 }
 
 ul {
     text-align: left;
     font-size: 1.1rem; /* Decreased font size to fit within frame */
-    margin-left: 3%; /* Further reduced left margin */
-    margin-right: 3%; /* Further reduced right margin */
+    margin: 0 3%; /* Further reduced left and right margin */
     line-height: 1.4; /* Compact line height */
 }
 
